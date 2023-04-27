@@ -9,6 +9,18 @@
 
 * Bonus: Generar cada uno de los elementos anteriores como un componente separado en un archivo separado.
 
+0. Definir un array como state
+1. Agregar un input   
+2. Leer el valor del input y meterlo en un state 
+3. Agregar un boton
+4. Agregar el handler (onClick) 
+4.1 leer el valor del input
+4.2 verificar que no este vacio
+4.3 agrego el valor al array
+4.4 limpio el input
+5. muestro el arreglo state en pantalla (map)
+5.1 verifio el tipo
+5.2 muestro segun corresponda
 
 ### Tarea 2: 
 

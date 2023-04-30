@@ -1,5 +1,6 @@
 import BlogPost from '../BlogPost/BlogPost';
-import Body from '../Body/Body'
+import Body from '../Body/Body';
+import "./Main.css";
 
 const Main = ({pageBody, links}) => {
     return(
@@ -11,8 +12,13 @@ const Main = ({pageBody, links}) => {
                     ))}
                 </ul> 
             </nav>
-            <Body pageBody={pageBody}/>
+
+            <div className='body'>
+                <Body pageBody={pageBody}/>
+            </div>
+            
             <BlogPost/>
+            
             {/* <p>hola buen dia</p> */}
         </>
     )

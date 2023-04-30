@@ -1,12 +1,21 @@
+import { useState } from "react";
 
-const ListItem = ({item, index, onDelete}) => {
+const ListItem = ({item, index, onDelete, onEdit}) => {
     
+    const[newItem, setNewitem] = useState(item);
+
+    const inputChangeHandler = (event) => 
+    {
+        setNewitem(event.target.value);
+    }
+
     let content = null;
     
     if (isNaN(Number(item))) {
         content = (
             <>
-                <input type="text" value={item}></input>
+                <input type="text" value={newItem} onChange={inputChangeHandler}></input>
+                <button onClick={onEdit.bind(null,index,newItem)}>Editar</button>
             </>
 
         )
@@ -16,7 +25,7 @@ const ListItem = ({item, index, onDelete}) => {
                 {   
                     Math.floor(item) % 2 === 0 
                     ? <li>{item} "par"</li> 
-                    : <li> {item} "impar"</li>  
+                    : <li>{item} "impar"</li>  
                 } 
                 
             </>
